@@ -1,13 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta property="og:image" content="assets/preview.jpg" />
+    <meta property="og:title" content="Space Tourism" />
+    <meta property="og:description" content="Website about space" />
+    <meta property="og:url" content="https://space-tourism.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <link
+      rel="shortcut icon"
+      href="assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Space Tourism</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="navbar">
+      <img class="navbar-logo" src="assets/shared/logo.svg" alt="logo" />
+      <img
+        class="navbar-menu"
+        src="assets/shared/icon-hamburger.svg"
+        alt="icon hamburger menu"
+      />
+      <!-- nav menu  -->
+      <ul class="menu-container">
+        <li><span>00</span> HOME</li>
+        <li><span>01</span> DESTINATION</li>
+        <li><span>02</span> CREW</li>
+        <li><span>03</span> TECHNOLOGY</li>
+      </ul>
+    </div>
+    <div class="main-container">
+      <!-- home  -->
+      <div class="home-container">
+        <!-- navbar  -->
+
+        <!-- titles  -->
+        <div class="titles-container">
+          <h5>SO, YOU WANT TO TRAVEL TO</h5>
+          <h1>SPACE</h1>
+          <p>
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </div>
+        <!-- explore  -->
+        <div class="explore">
+          <h1>EXPLORE</h1>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

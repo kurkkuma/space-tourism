@@ -1,0 +1,70 @@
+@import url(reset.css);
+@import url(home.css);
+/* @import url(destination.css);
+@import url(crew.css);
+@import url(technology.css); */
+
+@font-face {
+  font-family: "Barlow";
+  src: url("fonts/Barlow-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Barlow Condensed";
+
+  src: url("fonts/BarlowCondensed-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Bellefair";
+  src: url("fonts/Bellefair-Regular.ttf");
+}
+
+:root {
+  --black: #0b0d17;
+  --blue: #d0d6f9;
+  --white: #ffffff;
+  font-family: "Barlow";
+  font-size: 16px;
+  color: var(--white);
+}
+
+body {
+  background-image: url("/assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.main-container {
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 425px) {
+  :root {
+    font-size: 20px;
+  }
+  body {
+    background-image: url("/assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    font-size: 24px;
+  }
+  body {
+    background-image: url("/assets/home/background-home-desktop.jpg");
+  }
+}
+
+@media (min-width: 1551px) {
+  :root {
+    font-size: 28px;
+  }
+}
+@media (min-width: 2400px) {
+  :root {
+    font-size: 32px;
+  }
+}
