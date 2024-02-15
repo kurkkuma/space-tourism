@@ -1,7 +1,7 @@
 @import url(reset.css);
 @import url(home.css);
-/* @import url(destination.css);
-@import url(crew.css);
+@import url(destination.css);
+/* @import url(crew.css);
 @import url(technology.css); */
 
 @font-face {
@@ -25,10 +25,39 @@
   font-family: "Barlow";
   font-size: 16px;
   color: var(--white);
+  letter-spacing: 0.1rem;
 }
 
-body {
+h1,
+h3 {
+  font-family: "Bellefair";
+  font-weight: 100;
+}
+h5 {
+  font-family: "Barlow Condensed";
+  font-weight: 100;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+p {
+  font-size: 0.8rem;
+  font-weight: 100;
+  line-height: 1.4rem;
+}
+span {
+  font-weight: bold;
+}
+
+.home-container {
   background-image: url("/assets/home/background-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.destination-container {
+  background-image: url("/assets/destination/background-destination-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -37,30 +66,36 @@ body {
 
 .main-container {
   width: 100%;
-  padding: 0 1.5rem;
 }
 
 @media (min-width: 425px) {
   :root {
-    font-size: 20px;
+    font-size: 18px;
   }
-  body {
+
+  .home-container {
     background-image: url("/assets/home/background-home-tablet.jpg");
+  }
+  .destination-container {
+    background-image: url("/assets/destination/background-destination-tablet.jpg");
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    font-size: 24px;
+    font-size: 20px;
   }
-  body {
+  .home-container {
     background-image: url("/assets/home/background-home-desktop.jpg");
+  }
+  .destination-container {
+    background-image: url("/assets/destination/background-destination-desktop.jpg");
   }
 }
 
 @media (min-width: 1551px) {
   :root {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 @media (min-width: 2400px) {
