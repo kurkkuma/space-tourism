@@ -136,3 +136,15 @@ p {
     font-size: 32px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d0d6f9;
+  border-radius: 7px;
+}

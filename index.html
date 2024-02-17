@@ -13,6 +13,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/animate.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Space Tourism</title>
   </head>
@@ -48,16 +49,16 @@
       <!-- home  -->
       <div class="home-container">
         <div class="titles-container">
-          <h5>SO, YOU WANT TO TRAVEL TO</h5>
-          <h1>SPACE</h1>
-          <p>
+          <h5 class="wow fadeInLeft">SO, YOU WANT TO TRAVEL TO</h5>
+          <h1 class="wow fadeInLeft" data-wow-delay="0.2s">SPACE</h1>
+          <p class="wow fadeInLeft" data-wow-delay="0.4s">
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this
             world experience!
           </p>
         </div>
-        <div class="explore">
+        <div class="wow fadeInRight explore">
           <h1>EXPLORE</h1>
         </div>
       </div>
@@ -65,8 +66,12 @@
       <div class="destination-container">
         <h5 class="title"><span>01</span> Pick your destination</h5>
         <div class="destination-info-container">
-          <img src="assets/destination/image-moon.webp" alt="moon image" />
-          <div class="destination-info">
+          <img
+            class="wow rotateIn"
+            src="assets/destination/image-moon.webp"
+            alt="moon image"
+          />
+          <div class="destination-info wow fadeIn" data-wow-duration="2s">
             <ul>
               <li>MOON</li>
               <li>MARS</li>
@@ -91,8 +96,12 @@
       <div class="crew-container">
         <h5 class="title"><span>02</span> Meet your crew</h5>
         <div class="crew-info-container">
-          <img src="assets/crew/image-anousheh-ansari.webp" alt="crew photo" />
-          <div class="crew-info">
+          <img
+            class="wow fadeInRight"
+            src="assets/crew/image-anousheh-ansari.webp"
+            alt="crew photo"
+          />
+          <div class="crew-info wow fadeIn">
             <ul>
               <li>•</li>
               <li>•</li>
@@ -114,7 +123,7 @@
       <div class="technology-container">
         <h5 class="title"><span>03</span> Space launch 101</h5>
         <div class="technology-info-container">
-          <picture>
+          <picture class="wow fadeInRight">
             <source
               media="(max-width: 1023px )"
               srcset="assets/technology/image-launch-vehicle-landscape.jpg"
@@ -128,15 +137,17 @@
               alt="technology photo"
             />
           </picture>
-          <ul>
+          <ul class="wow fadeInLeft">
             <li>1</li>
             <li>2</li>
             <li>3</li>
           </ul>
           <div class="technology-info">
-            <p class="terminology">THE TERMINOLOGY…</p>
-            <h1>LAUNCH VEHICLE</h1>
-            <p>
+            <p class="terminology wow fadeIn" data-wow-delay="0.1s">
+              THE TERMINOLOGY…
+            </p>
+            <h1 class="wow fadeIn" data-wow-delay="0.3s">LAUNCH VEHICLE</h1>
+            <p class="wow fadeIn" data-wow-delay="0.5s">
               A launch vehicle or carrier rocket is a rocket-propelled vehicle
               used to carry a payload from Earth's surface to space, usually to
               Earth orbit or beyond. Our WEB-X carrier rocket is the most
@@ -148,5 +159,9 @@
       </div>
     </div>
     <script type="module" src="/main.js"></script>
+    <script src="styles/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
