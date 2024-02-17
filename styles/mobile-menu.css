@@ -1,0 +1,31 @@
+.mobile-menu {
+  background: rgba(80, 81, 92, 0.341);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.4px);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  font-family: "Barlow Condensed";
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+.mobile-menu img {
+  width: 1.2rem;
+  height: 1.2rem;
+  align-self: end;
+  cursor: pointer;
+}
+.mobile-menu ul li {
+  margin-bottom: 2rem;
+}
+.mobile-menu span {
+  font-weight: bold;
+}
+.mobile-menu.show {
+  transform: translateX(0);
+}
