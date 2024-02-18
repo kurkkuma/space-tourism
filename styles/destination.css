@@ -30,7 +30,11 @@
 }
 .destination-container li {
   padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+.destination-container li.active {
   border-bottom: 2px solid var(--white);
+  color: var(--white);
 }
 .destination-container h1 {
   font-size: 3.5rem;
