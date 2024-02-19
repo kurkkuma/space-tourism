@@ -22,19 +22,20 @@ exploreBtn.addEventListener("click", () => {
 //navbar novigation
 function handleNavigation(navItems) {
   navItems.forEach((item) => {
+    const sectionName =
+      item.textContent
+        .trim()
+        .replace(/^\d+\s*/, "")
+        .toLowerCase() + "-container";
+
+    const section = document.querySelector(`.${sectionName}`);
+
     item.addEventListener("click", () => {
       navItems.forEach((otherItem) => {
         otherItem.classList.remove("active");
       });
       item.classList.add("active");
 
-      const sectionName =
-        item.textContent
-          .trim()
-          .replace(/^\d+\s*/, "")
-          .toLowerCase() + "-container";
-
-      const section = document.querySelector(`.${sectionName}`);
       section.scrollIntoView({ behavior: "smooth" });
     });
   });
@@ -50,6 +51,34 @@ const mobileNavigation = document
 
 handleNavigation(desktopNavigation);
 handleNavigation(mobileNavigation);
+
+const sections = document.querySelectorAll(".main-container > div");
+
+// Function to handle navigation based on scroll position
+function handleScrollNavigation(entries) {
+  entries.forEach((entry) => {
+    const sectionName = entry.target.classList[0];
+    const navItem = document.getElementById(`${sectionName}-nav`);
+
+    if (navItem) {
+      desktopNavigation.forEach((item) => {
+        item.classList.remove("active");
+      });
+      navItem.classList.add("active");
+    }
+  });
+}
+
+const observer = new IntersectionObserver(handleScrollNavigation, {
+  threshold: 0.5,
+});
+
+const reversedSections = Array.from(sections).reverse();
+
+reversedSections.forEach((section) => {
+  observer.observe(section);
+});
+
 // destination planet nav
 const planets = destinationSection.querySelectorAll("li");
 
@@ -57,13 +86,12 @@ planets.forEach((item) => {
   item.addEventListener("click", (event) => {
     const clickedItem = event.target;
 
-
     planets.forEach((otherItem) => {
       otherItem.classList.remove("active");
     });
 
     item.classList.add("active");
-  
+
     document.getElementById("planet-image").src = clickedItem.dataset.image;
     document.getElementById("planet-name").innerHTML = clickedItem.dataset.name;
     document.getElementById("planet-info").innerHTML = clickedItem.dataset.info;
