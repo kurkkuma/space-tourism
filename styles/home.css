@@ -119,7 +119,6 @@
     flex-direction: row;
     justify-content: space-between;
     height: 100vh;
-    /* padding-top: 15rem; */
   }
   .explore {
     margin-right: 8.25rem;
@@ -136,29 +135,9 @@
   .menu-container {
     padding: 0 7rem;
   }
-  .menu-container::before {
-    position: absolute;
-    top: 50%;
-    left: -360px;
-    content: "";
-    width: 35vw;
-    height: 2px;
-    background-color: rgb(127, 127, 127);
-    z-index: -10;
-  }
 }
 @media (min-width: 1350px) {
   .titles-container {
     padding: 0 8.25rem;
-  }
-}
-@media (min-width: 1500px) {
-  .menu-container::before {
-    left: -510px;
-  }
-}
-@media (min-width: 2100px) {
-  .menu-container::before {
-    left: -720px;
   }
 }
