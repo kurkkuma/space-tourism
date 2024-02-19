@@ -57,7 +57,7 @@ p {
 }
 
 .home-container {
-  background-image: url("/assets/home/background-home-mobile.jpg");
+  background-image: url("/assets/home/background-home-mobile-webp.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -106,7 +106,7 @@ p {
     font-size: 18px;
   }
   .home-container {
-    background-image: url("/assets/home/background-home-tablet.jpg");
+    background-image: url("/assets/home/background-home-tablet-webp.webp");
   }
   .destination-container {
     background-image: url("/assets/destination/background-destination-tablet.jpg");
