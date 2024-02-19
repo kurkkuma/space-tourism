@@ -57,12 +57,13 @@ planets.forEach((item) => {
   item.addEventListener("click", (event) => {
     const clickedItem = event.target;
 
+
     planets.forEach((otherItem) => {
       otherItem.classList.remove("active");
     });
 
     item.classList.add("active");
-
+  
     document.getElementById("planet-image").src = clickedItem.dataset.image;
     document.getElementById("planet-name").innerHTML = clickedItem.dataset.name;
     document.getElementById("planet-info").innerHTML = clickedItem.dataset.info;
