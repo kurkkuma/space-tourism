@@ -113,7 +113,7 @@ crewDots.forEach((item) => {
     item.classList.add("active");
 
     document.getElementById("person-image").src = clickedItem.dataset.image;
-    document.getElementById("person-seciality").innerHTML =
+    document.getElementById("person-speciality").innerHTML =
       clickedItem.dataset.speciality;
     document.getElementById("person-name").innerHTML = clickedItem.dataset.name;
     document.getElementById("person-info").innerHTML = clickedItem.dataset.info;
